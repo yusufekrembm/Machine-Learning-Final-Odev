@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+
+# Buyuk veri dosyalari (UCI'dan ayrica indirilir) — repoya yuklenmez
+data/
+
+# Egitim ara checkpointleri (model.joblib ile ayni, gereksiz)
+results/checkpoints/
+
+node_modules/
+package.json
+package-lock.json
+.DS_Store
+_full_egitim.ipynb
+_smoke_egitim.ipynb
+
+# Claude local ayarlari
+.claude/
+
+# Office gecici kilit dosyalari
+~$*

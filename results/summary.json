@@ -1,0 +1,96 @@
+{
+  "n_samples": 100000,
+  "is_synthetic": false,
+  "device": "cuda",
+  "selected_features_top15": [
+    "m_bb",
+    "m_wwbb",
+    "missing_energy_magnitude",
+    "m_wbb",
+    "jet1_pt",
+    "jet2_b_tag",
+    "jet4_pt",
+    "lepton_pT",
+    "m_jjj",
+    "jet3_b_tag",
+    "jet4_b_tag",
+    "jet2_pt",
+    "m_lv",
+    "m_jj",
+    "jet1_b_tag"
+  ],
+  "model_summary": [
+    {
+      "model": "XGBoost",
+      "accuracy_mean": 0.7214,
+      "precision_mean": 0.7356,
+      "recall_mean": 0.7357,
+      "f1_mean": 0.7356,
+      "roc_auc_mean": 0.7967,
+      "accuracy_std": 0.0033,
+      "precision_std": 0.0023,
+      "recall_std": 0.0068,
+      "f1_std": 0.004,
+      "roc_auc_std": 0.0049
+    },
+    {
+      "model": "MLP",
+      "accuracy_mean": 0.6978,
+      "precision_mean": 0.6963,
+      "recall_mean": 0.7564,
+      "f1_mean": 0.7251,
+      "roc_auc_mean": 0.7637,
+      "accuracy_std": 0.0032,
+      "precision_std": 0.0035,
+      "recall_std": 0.0043,
+      "f1_std": 0.0028,
+      "roc_auc_std": 0.0047
+    },
+    {
+      "model": "SVM",
+      "accuracy_mean": 0.64,
+      "precision_mean": 0.6418,
+      "recall_mean": 0.7201,
+      "f1_mean": 0.6783,
+      "roc_auc_mean": 0.7032,
+      "accuracy_std": 0.0242,
+      "precision_std": 0.0254,
+      "recall_std": 0.0311,
+      "f1_std": 0.0202,
+      "roc_auc_std": 0.0188
+    },
+    {
+      "model": "KNN",
+      "accuracy_mean": 0.6095,
+      "precision_mean": 0.6067,
+      "recall_mean": 0.7352,
+      "f1_mean": 0.6642,
+      "roc_auc_mean": 0.648,
+      "accuracy_std": 0.0235,
+      "precision_std": 0.0158,
+      "recall_std": 0.0573,
+      "f1_std": 0.0288,
+      "roc_auc_std": 0.0214
+    }
+  ],
+  "best_model": "XGBoost",
+  "best_params": {
+    "clf__colsample_bytree": "0.8",
+    "clf__learning_rate": "0.1",
+    "clf__max_depth": "6",
+    "clf__n_estimators": "200",
+    "clf__subsample": "0.8",
+    "select__k": "15"
+  },
+  "outer": 5,
+  "inner": 3,
+  "k_grid": [
+    10,
+    15
+  ],
+  "class_balance": {
+    "1.0": 0.5269,
+    "0.0": 0.4731
+  },
+  "runtime_sec": 1643.9
+}
